@@ -8,3 +8,33 @@ output: html_document
 # learning ggplot
 
 We're learning ggplot. it is going to be amazing.
+
+```{r}
+ohi_data <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/OHI_global_data.csv")
+
+ ggplot(data = ohi_data, aes(x = georegion_one)) +  geom_bar()
+
+```
+# Another level of plot entirely
+* Still having mixed feeling about my result popping on the RMarkdown*
+
+```{r}
+
+
+my_plot <- ggplot(data = ohi_data, aes(x=OHI_score, fill=georegion_one)) +
+  geom_histogram()  
+
+my_plot +    # the plot created in question 1 continued...
+  labs(x = "OHI score",
+       y = "Number of countries",
+       title = "Distribution of OHI scores") +
+  theme_light() +
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+        axis.text.y = element_text(size = 14),
+        axis.title = element_text(size = 16)
+        )
+
+```
+
+
