@@ -1,0 +1,10 @@
+---
+title: "Graphics with ggplot"
+author: "Mubashir Ekungba"
+date: "September 7, 2019"
+output: html_document
+---
+
+# learning ggplot
+
+We're learning ggplot. it is going to be amazing.
